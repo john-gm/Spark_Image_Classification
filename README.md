@@ -18,7 +18,7 @@ Example Image Classification Program Using Spark
 [Link to Keras Documentation](https://keras.io/)
 
 ## Reads Files from
-./caltech-256-image-dataset/256_ObjectCategories/*/*
+./caltech-256-image-dataset/256_ObjectCategories/\*/\*
 
 ### Dataset Download
 [Link to Caltech256 Website for Dataset](http://www.vision.caltech.edu/Image_Datasets/Caltech256/)
