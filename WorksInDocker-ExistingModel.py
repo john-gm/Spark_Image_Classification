@@ -32,8 +32,8 @@ model = ModelDownloader(spark, "models").downloadByName("ResNet50")
 
 # In[ ]:
 
-
-image_path = './caltech-256-image-dataset/256_ObjectCategories/*/*.jpg'
+# must be absolute path if running on single node
+image_path = '/notebooks/caltech-256-image-dataset/256_ObjectCategories/*/*.jpg'
 
 
 # In[ ]:
