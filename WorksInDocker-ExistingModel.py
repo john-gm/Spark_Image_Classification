@@ -9,6 +9,13 @@ from pyspark.sql.functions import udf, col
 from pyspark.sql.types import IntegerType, StringType, DoubleType
 from pyspark.ml import Transformer, Estimator, Pipeline
 from pyspark.ml.classification import LogisticRegression
+
+import pyspark
+spark = pyspark.sql.SparkSession.builder.appName("MyApp") \
+            .config("spark.jars.packages", "Azure:mmlspark:0.13") \
+            .getOrCreate()
+import mmlspark
+
 from mmlspark import CNTKModel, ModelDownloader
 
 from mmlspark import *
