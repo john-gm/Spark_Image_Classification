@@ -306,7 +306,7 @@ def getLabel(path):
 
 
 #Read in images
-imageDF = spark.readImages(image_path, sampleRatio=0.005)
+imageDF = spark.readImages(image_path, sampleRatio=0.0025)
 getLabelUDF = udf(lambda row: getLabel(row[0]), DoubleType())
 imageDF = imageDF.withColumn("labels", getLabelUDF(col('image')))
 
@@ -319,7 +319,7 @@ imageDF.printSchema()
 # Make some featurizers
 it = (ImageTransformer()
     .setOutputCol("scaled")
-    .resize(height = 256, width = 256))
+    .resize(height = 60, width = 60))
 
 ur = (UnrollImage()
     .setInputCol("scaled")
