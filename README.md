@@ -26,13 +26,17 @@ Example Image Classification Program Using Spark
 
 ## Running the code
 Create the docker container using
+
 $ docker run -it -p 8888:8888 -e ACCEPT_EULA=yes microsoft/mmlspark
 
 Add python and model files to docker container
+
 $ docker cp [image-dataset-folder] [container id]:\notebooks\
+
 $ docker cp [local-ipynb-file] [containerid]:\notebooks\
 
 The .ipynb notebook can be started in docker container and should run without issue.
 
 To run the .py file use docker exec: 
+
 $ docker exec [container id] spark-submit --packages Azure:mmlspark:0.13 /notebooks/WorksInDocker-ExistingModel.py
