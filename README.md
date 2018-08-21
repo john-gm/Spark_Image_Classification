@@ -40,6 +40,3 @@ The .ipynb notebook can be started in docker container and should run without is
 To run the .py file use docker exec: 
 
 $ docker exec [container id] spark-submit --packages Azure:mmlspark:0.13 /notebooks/WorksInDocker-ExistingModel.py
-
-
-<a href="http://www.vision.caltech.edu/Image_Datasets/Caltech256/" target="_blank">Link to Caltech256 Website for Dataset</a>
